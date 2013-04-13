@@ -1,0 +1,20 @@
+{% load staticfiles %}
+
+<html dir="rtl">
+<head>
+	<title>Understanding the Tzi</title>
+	<link rel="stylesheet" type="text/css" href="/static/eshrine/shrine-style.css" />
+</head>
+<body>
+	<div class="eshrine" style="text-align:right;width:50%;font-family:'David';font-size:20px;">
+		{% include "navigation.html" %}
+		<h1>The Holy Tzictionary</h1>
+			{% for entry in words %}
+			<div style="margin-bottom:25px;border-top: 2px solid rgba(150,0,0,0.6);border-left: 2px solid rgba(150,0,0,0.6);border-radius: 10px;">
+				<div style="font-size:16px;font-style:italic;color:rgb(200,0,0);text-align:left;">Author: {{ entry.author }}</div>
+				<div style="color:#CC6600;display:inline;">{{ entry.word }}</div>: {{ entry.definition }} <br>
+			</div>
+			{% endfor %}
+	</div>
+</body>
+</html>
