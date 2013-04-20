@@ -12,7 +12,8 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': os.path.join(os.path.abspath(__file__), '../TziDB'), # Or path to database file if using sqlite3.
+        'NAME': os.path.join(os.path.abspath(os.path.dirname(__file__)), '../TziDB'), # Or path to database file if using sqlite3.
+#	'NAME: '/var/www/html/OhTzi/TziDB',
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',

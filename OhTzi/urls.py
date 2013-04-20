@@ -10,5 +10,5 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^/?$', redirect_to, {'url': '/eshrine/'}),
     url(r'^admin/?', include(admin.site.urls)),
-    url(r'^eshrine/?', include('eshrine.urls')),
+    url(r'^eshrine/', include('eshrine.urls')),
 )
