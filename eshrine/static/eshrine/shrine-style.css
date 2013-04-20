@@ -1,67 +1,81 @@
 body {
 	background: black url("/static/eshrine/graphics/fire-bg.jpg") no-repeat center top;
-	background-size:100%;
+	background-size: 100%;
 }
+
 h1 {
-	text-align:center;
+	text-align: center;
 	color:#CC6600;
-	font-size:40px;
+	font-size: 40px;
 	text-shadow: 8px 8px 2px rgb(80, 0, 0);
-	width:100%;
+	width: 100%;
 }
+
 h2 {
-	color:#CC6600;
-	font-size:20px;
+	color: #CC6600;
+	font-size: 20px;
 	text-shadow: 2px 2px 2px #000;
 }
+
 a:link {
-	color:rgb(255,150,255);
+	color: rgb(255,150,255);
 }
+
 a:visited {
-	color:rgb(255,150,255);
+	color: rgb(255,150,255);
 }
+
 a:hover {
-	color:#CC6600;
+	color: #CC6600;
 }
+
 a:active {
-	color:#FFFFFF;
+	color: #FFFFFF;
 }
+
 li {
-	margin-bottom:10px;
+	margin-bottom: 10px;
 }
+
 .eshrine {
-	width:960px;
-	color:#fff;
-	font-size:18px;
-	font-family:'Georgia';
-	margin-left:auto;
-	margin-right:auto;
+	width: 960px;
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Georgia';
+	margin-left: auto;
+	margin-right: auto;
 }
+
 .eshrine-element {
-	background-color:rgba(40, 0, 0, 0.5);
-	border-radius:10px;
-	padding:10px;
-	margin:5px;
-	display:block;
-	overflow:auto;
+	background-color: rgba(40, 0, 0, 0.5);
+	border-radius: 10px;
+	padding: 10px;
+	margin: 5px;
+	display: block;
+	overflow: auto;
 }
+
 .eshrine-wrapper {
 	background: transparent url("/static/eshrine/graphics/candles-bg-50-pictures.jpg") no-repeat center bottom;
 	text-shadow: 2px 2px 2px #000;
-	height:70%;
+	height: 70%;
 }
+
 .eshrine-row {
-	overflow:auto;
-	display:block;
+	overflow: auto;
+	display: block;
 }
+
 .eshrine-body {
-	float:left;
+	float: left;
 }
+
 .eshrine-announcements {
-	width:30%;
-	float:right;
-	font-size:12px;
+	width: 30%;
+	float: right;
+	font-size: 12px;
 }
+
 .navigation {
-	text-align:center;
+	text-align: center;
 }
