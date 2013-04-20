@@ -3,30 +3,33 @@
 <head>
 	<title>Oh Tzi</title>
 	<link rel="stylesheet" type="text/css" href="/static/eshrine/shrine-style.css" />
+	<link rel="shortcut icon" href="/static/eshrine/graphics/favicon.ico" />
 </head>
 <body>
+	{% include "navigation.html" %}
 	<div class="eshrine">
 		<h1><img src="/static/eshrine/graphics/banner-transparent.png"></h1>
 		<div class="eshrine-wrapper">
-			<div style="float:left;display:block;overflow:auto;width:65%;">
-				<div class="eshrine-body eshrine-element">
-					<h2>Welcome to our e-shrine.</h2>
-					<p>
-						This is a place where we come together to worship the almighty Tzi Allstar and thank the benevolent demigod for all that He has bestowed upon us.
-					</p>
-					<p>All hail the mighty Tzi and all glory to the Hypnotoad.</p>
-					<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+			<div class="home-element">
+				<div style="float:left;overflow:auto;width:65%;">
+					<div class="eshrine-body eshrine-element home-element">
+						<h2>Welcome to our e-shrine.</h2>
+						<p>
+							This is a place where we come together to worship the almighty Tzi Allstar and thank the benevolent demigod for all that He has bestowed upon us.
+						</p>
+						<p>All hail the mighty Tzi and all glory to the Hypnotoad.</p>
+						<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+					</div>
 				</div>
-				{% include "navigation.html" %}
+				<div style="width:30%;" class="eshrine-announcements eshrine-element home-element">
+					<h2>Announcements</h2>
+					The Tzi has decreed that it is now {{now}}
+					<ul>
+						{% for ann in annoucements %}
+						<li><div style="color:#CC6600;display:inline;">{{ ann.date }}</div>: {{ ann.annoucement|safe }}</li>
+						{% endfor %}
+					</ul>
 			</div>
-			<div class="eshrine-announcements eshrine-element">
-				<h2>Announcements</h2>
-				The Tzi has decreed that it is now {{now}}
-				<ul>
-					{% for ann in annoucements %}
-					<li><div style="color:#CC6600;display:inline;">{{ ann.date }}</div>: {{ ann.annoucement|safe }}</li>
-					{% endfor %}
-				</ul>
 			</div>
 		</div>
 	</div>

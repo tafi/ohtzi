@@ -4,10 +4,11 @@
 <head>
 	<title>Understanding the Tzi</title>
 	<link rel="stylesheet" type="text/css" href="/static/eshrine/shrine-style.css" />
+	<link rel="shortcut icon" href="/static/eshrine/graphics/favicon.ico" />
 </head>
 <body>
+	{% include "navigation.html" %}
 	<div class="eshrine" style="text-align:right;width:50%;font-family:'David';font-size:20px;">
-		{% include "navigation.html" %}
 		<h1>The Holy Tzictionary</h1>
 			{% for entry in words %}
 			<div style="margin-bottom:25px;border-top: 2px solid rgba(150,0,0,0.6);border-left: 2px solid rgba(150,0,0,0.6);border-radius: 10px;">
