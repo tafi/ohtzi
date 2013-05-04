@@ -10,18 +10,16 @@
 	<div class="eshrine">
 		<h1><img src="/static/eshrine/graphics/banner-transparent.png"></h1>
 		<div class="eshrine-wrapper">
-			<div class="home-element">
-				<div style="float:left;overflow:auto;width:65%;">
-					<div class="eshrine-body eshrine-element home-element">
-						<h2>Welcome to our e-shrine.</h2>
-						<p>
-							This is a place where we come together to worship the almighty Tzi Allstar and thank the benevolent demigod for all that He has bestowed upon us.
-						</p>
-						<p>All hail the mighty Tzi and all glory to the Hypnotoad.</p>
-						<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br> -->
-					</div>
+			<div class="home-element" style="float:left; width: 53%;">
+				<div class="eshrine-element">
+					<h2 style="font-size:28px;">Welcome to our e-shrine.</h2>
+					<p>
+						This is a place where we come together to worship the almighty Tzi Allstar and thank the benevolent demigod for all that He has bestowed upon us.
+					</p>
+					<p>All hail the mighty Tzi and all glory to the Hypnotoad.</p>
+					<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br> -->
 				</div>
-				<div style="width:30%;" class="eshrine-announcements eshrine-element home-element">
+				<div class="eshrine-list eshrine-element">
 					<h2>Announcements</h2>
 					The Tzi has decreed that it is now {{now}}
 					<ul>
@@ -29,7 +27,13 @@
 						<li><div style="color:#CC6600;display:inline;">{{ ann.date }}</div>: {{ ann.annoucement|safe }}</li>
 						{% endfor %}
 					</ul>
+				</div>
 			</div>
+			<div class="home-element eshrine-element eshrine-list" style="float: right; width: 40%;">
+				<h2>Blessings</h2>
+				<ul>
+					<li><div style="color:#CC6600;display:inline;">T</div>: Ohhhh Tzi</li>
+				</ul>
 			</div>
 		</div>
 	</div>

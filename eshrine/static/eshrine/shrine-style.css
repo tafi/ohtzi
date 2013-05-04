@@ -49,24 +49,19 @@ li {
 .eshrine-element {
 	background-color: rgba(40, 0, 0, 0.5);
 	border-radius: 10px;
-	padding: 10px;
-	margin: 5px;
+	padding: 15px;
+	margin: 15px;
 	overflow: auto;
 }
 
 .eshrine-wrapper {
-	background: transparent url("/static/eshrine/graphics/candles-bg-50-pictures.jpg") no-repeat center bottom;
+	background: transparent url("/static/eshrine/graphics/candles-bg-50-pictures.jpg") no-repeat center top;
 	text-shadow: 2px 2px 2px #000;
 	height: 70%;
 }
 
-.eshrine-body {
-	float: left;
-}
-
-.eshrine-announcements {
-	float: right;
-	font-size: 12px;
+.eshrine-list {
+	font-size: 14px;
 }
 
 .navigation {
@@ -76,5 +71,5 @@ li {
 }
 
 .home-element {
-	height: 280px;
+	height: 430px;
 }
