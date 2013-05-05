@@ -1,3 +1,4 @@
+/************* GENERAL ******************/
 body {
 	background: black url("/static/eshrine/graphics/fire-bg.jpg") no-repeat center top;
 	background-size: 100%;
@@ -53,7 +54,9 @@ li {
 	margin: 15px;
 	overflow: auto;
 }
+/************* /GENERAL ******************/
 
+/************* HOMEPAGE ******************/
 .eshrine-wrapper {
 	background: transparent url("/static/eshrine/graphics/candles-bg-50-pictures.jpg") no-repeat center top;
 	text-shadow: 2px 2px 2px #000;
@@ -64,12 +67,116 @@ li {
 	font-size: 14px;
 }
 
+.home-element {
+	height: 430px;
+}
+/************* /HOMEPAGE ******************/
+
+
+/************* NAVIGATION ******************/
 .navigation {
 	text-align: left;
 	font-size: 16px;
 	float: left;
 }
+/************* /NAVIGATION ******************/
 
-.home-element {
-	height: 430px;
+/************* FORMS ******************/
+.prayer-form {
+	border:1px solid #CC6600;
+	width:70%;
+	padding:5px;
 }
+
+.prayer-form-element {
+	width:96%;
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid rgb(150, 150, 0);
+	border-radius: 3px;
+	color: rgb(150, 150, 0);
+	font-family: 'Georgia';
+	font-size:12px;
+}
+
+.prayer-button {
+	width: 220px;
+	border-radius: 4px;
+	text-shadow: 2px 2px 2px #000;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	padding:5px;
+	margin:5px;
+	background-color: #ff3300; /* fallback */
+	background: -moz-linear-gradient(top, #ffcc00, #ff3300);
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#ff3300));
+	background: -o-linear-gradient(top, #ff4d55, #cc1d31);
+}
+
+.prayer-button:hover {
+	-webkit-animation-name: prayer;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	animation-name: prayer;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.prayer-missing-req {
+	-webkit-animation-name: missing-req;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-iteration-count: 5;
+	-webkit-animation-direction: normal;
+	animation-name: missing-req;
+	animation-duration: 0.8s;
+	animation-iteration-count: 3;
+	animation-direction: normal;
+}
+
+@keyframes prayer {
+	0% {
+		color:rgba(0, 0, 0, 1);
+	}
+	100% {
+		color:rgba(0, 0, 0, 0);
+		text-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
+	}
+}
+
+@-webkit-keyframes prayer {
+	0% {
+		color:rgba(255, 255, 255, 1);
+	}
+	50% {
+		color:rgba(255, 255, 255, 0);
+		text-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
+	}
+}
+
+@keyframes missing-req {
+	0% {
+		background-color: white;
+	}
+	50% {
+		background-color:rgb(200, 0, 0);
+	}
+	100% {
+		background-color: white;
+	}
+}
+
+@-webkit-keyframes missing-req {
+	0% {
+		background-color: white;
+	}
+	50% {
+		background-color:rgb(200, 0, 0);
+	}
+	100% {
+		background-color: white;
+	}
+}
+/************* /FORMS ******************/

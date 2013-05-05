@@ -4,6 +4,8 @@
 	<title>Oh Tzi</title>
 	<link rel="stylesheet" type="text/css" href="/static/eshrine/shrine-style.css" />
 	<link rel="shortcut icon" href="/static/eshrine/graphics/favicon.ico" />
+	<script src="/static/eshrine/jquery-1.9.1.min.js"></script>
+	<script src="/static/eshrine/prayer.js"></script>
 </head>
 <body>
 	{% include "navigation.html" %}
@@ -17,7 +19,6 @@
 						This is a place where we come together to worship the almighty Tzi Allstar and thank the benevolent demigod for all that He has bestowed upon us.
 					</p>
 					<p>All hail the mighty Tzi and all glory to the Hypnotoad.</p>
-					<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br> -->
 				</div>
 				<div class="eshrine-list eshrine-element">
 					<h2>Announcements</h2>
@@ -31,9 +32,18 @@
 			</div>
 			<div class="home-element eshrine-element eshrine-list" style="float: right; width: 40%;">
 				<h2>Praise & Prayer</h2>
-				<ul>
-					<li><div style="color:#CC6600;display:inline;">T</div>: Ohhhh Tzi</li>
-				</ul>
+				<button id="add" class="prayer-button">Click to pray to the Tzi</button>
+				<form id="prayer-form" class="prayer-form">
+					<input type="hidden" value="" id="date-input"/> 
+					<input type="text" value="Your name" id="name-input" class="prayer-form-element"/><br>
+					<textarea value="Your prayer" id="prayer-input" style="height:100px;" class="prayer-form-element"></textarea><br>
+					<input type="submit" value="Submit" id="prayer-submit" class="prayer-button" style="width:80px;"/>
+				</form>
+					<ul>
+						<div id="prayer-list">
+							<li><div style="color:#CC6600;display:inline;">T, date</div>: Ohhhh Tzi</li>
+						</div>
+					</ul>
 			</div>
 		</div>
 	</div>
