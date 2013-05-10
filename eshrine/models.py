@@ -7,13 +7,13 @@ class Announcement(models.Model):
     def __unicode__(self):
         return "%s: %s" % (self.date, self.announcement)
 
-class Comment(models.Model):
+class Prayer(models.Model):
     author = models.CharField(max_length=100)
     date = models.DateTimeField()
-    comment = models.CharField(max_length=500)
+    prayer = models.CharField(max_length=500)
     
     def __unicode__(self):
-        return "On %s by %s: %s" % (self.date, self.author, self.comment)
+        return "On %s by %s: %s" % (self.date, self.author, self.prayer)
     
 class Definition(models.Model):
     author = models.CharField(max_length=100)
