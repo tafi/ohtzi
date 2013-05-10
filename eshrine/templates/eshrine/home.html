@@ -33,17 +33,16 @@
 			<div class="home-element eshrine-element eshrine-list" style="float: right; width: 40%;">
 				<h2>Praise & Prayer</h2>
 				<button id="add" class="prayer-button">Click to pray to the Tzi</button>
-				<form id="prayer-form" class="prayer-form" method="post" action="/eshrine/submit-prayer/">
+				<!-- <form id="prayer-form" class="prayer-form" method="post" action="/eshrine/pray/"> -->
+				<form id="prayer-form" class="prayer-form" method="post">
 					{% csrf_token %}
-					<input type="hidden" value="" id="date-input"/> 
-					<input type="text" value="Your name" id="name-input" class="prayer-form-element"/><br>
-					<textarea value="Your prayer" id="prayer-input" style="height:100px;" class="prayer-form-element"></textarea><br>
+					{{ prayer_form.as_p }}
 					<input type="submit" value="Submit" id="prayer-submit" class="prayer-button" style="width:80px;"/>
 				</form>
 					<ul>
 						<div id="prayer-list">
 						{% for prayer in prayers %}
-							<li><div style="color:#CC6600;display:inline;">{{ prayer.author}} ({{ prayer.date }})</div>: {{ prayer.prayer }}</li>
+							<li><div class="prayer-title">{{ prayer.author}} ({{ prayer.date }})</div>: {{ prayer.prayer }}</li>
 						{% endfor %}
 						</div>
 					</ul>

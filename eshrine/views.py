@@ -2,7 +2,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from datetime import datetime
-from models import Announcement, Prayer, Definition
+from models import Announcement, Prayer, PrayerForm, Definition
 
 DATE_FMT = "%B %d, %Y"
 
@@ -20,16 +20,26 @@ def home(request):
                              'author': prayer.author,
                              'prayer': prayer.prayer
                              })
+    prayer_form = PrayerForm()
     context = {"now": datetime.now().strftime(DATE_FMT),
                "annoucements": ann_texts,
-               "prayers": prayer_texts}
+               "prayers": prayer_texts,
+               "prayer_form": prayer_form}
     return render(request, template, context)
 
-def submit_prayer(request):
+def pray(request):
     if request.method == "POST":
-        prayer = Prayer()
-        raise Exception(request.POST)
-#         return HttpResponse("YA");
+        form = PrayerForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            form.save()
+            msg = 'SUCCESS'
+        else:
+            msg = "FAILURE = %s" % (form.errors)
+            raise Exception(msg)
+    else:
+        msg = 'Unsupported opertaion: GET'
+    return HttpResponse(msg);
 
 def understand(request):
     template = "eshrine/understand.html"

@@ -91,7 +91,7 @@ li {
 
 .prayer-form-element {
 	width:96%;
-	margin: 5px;
+	margin: 0px;
 	padding: 5px;
 	border: 1px solid rgb(150, 150, 0);
 	border-radius: 3px;
@@ -113,6 +113,11 @@ li {
 	background: -moz-linear-gradient(top, #ffcc00, #ff3300);
 	background: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#ff3300));
 	background: -o-linear-gradient(top, #ff4d55, #cc1d31);
+}
+
+.prayer-title {
+	color: #CC6600;
+	display: inline;
 }
 
 .prayer-button:hover {

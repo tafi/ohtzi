@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ModelForm
 
 class Announcement(models.Model):
     date = models.DateTimeField()
@@ -10,10 +11,15 @@ class Announcement(models.Model):
 class Prayer(models.Model):
     author = models.CharField(max_length=100)
     date = models.DateTimeField()
-    prayer = models.CharField(max_length=500)
+    prayer = models.TextField()
     
     def __unicode__(self):
         return "On %s by %s: %s" % (self.date, self.author, self.prayer)
+    
+class PrayerForm(ModelForm):
+    class Meta:
+        model = Prayer
+        fields = ['author', 'date', 'prayer']    
     
 class Definition(models.Model):
     author = models.CharField(max_length=100)
