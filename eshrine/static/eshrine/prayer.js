@@ -78,7 +78,7 @@ $(document).ready(function() {
                 data: $(prayerSel).serialize(),
                 type: $(prayerSel).attr('method'),
                 url: "/eshrine/pray/",
-                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                error: function(response) {
                 	alert("An error has occured. The Tzi might not be available for prayers at this moment.");
                 },
                 success: function(response) {

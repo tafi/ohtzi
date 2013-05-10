@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.core.mail import send_mail
 from datetime import datetime
 from models import Announcement, Prayer, PrayerForm, Definition
 
@@ -34,6 +35,14 @@ def pray(request):
             data = form.cleaned_data
             form.save()
             msg = 'SUCCESS'
+            
+            # Maybe one day:
+#             mail_msg = "New prayer added!\n\n%s" % form.cleaned_data
+#             try:
+#                 send_mail("[OH TZI] prayer added", mail_msg, 'tafitaf@gmail.com',
+#                           recipient_list=['tafitaf@gmail.com'])
+#             except Exception as e:
+#                 raise Exception(e)
         else:
             msg = "FAILURE = %s" % (form.errors)
             raise Exception(msg)

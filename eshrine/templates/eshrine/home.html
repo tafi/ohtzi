@@ -20,14 +20,18 @@
 					</p>
 					<p>All hail the mighty Tzi and all glory to the Hypnotoad.</p>
 				</div>
-				<div class="eshrine-list eshrine-element">
-					<h2>Announcements</h2>
-					The Tzi has decreed that it is now {{now}}
-					<ul>
-						{% for ann in annoucements %}
-						<li><div style="color:#CC6600;display:inline;">{{ ann.date }}</div>: {{ ann.annoucement|safe }}</li>
-						{% endfor %}
-					</ul>
+				<div class="eshrine-list eshrine-element" style="height: 50%;">
+					<div>
+						<h2>Announcements</h2>
+						The Tzi has decreed that it is now {{now}}
+					</div>
+					<div>
+						<ul>
+							{% for ann in annoucements %}
+							<li><div style="color:#CC6600;display:inline;">{{ ann.date }}</div>: {{ ann.annoucement|safe }}</li>
+							{% endfor %}
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="home-element eshrine-element eshrine-list" style="float: right; width: 40%;">
