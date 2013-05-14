@@ -55,6 +55,11 @@ $(document).ready(function() {
 		setTimeout(function(){$("#prayer-form").show('slow');}, 500);
 	});
 	
+	$("#prayer-cancel").click(function(){
+		$("#prayer-form").hide('slow');
+		$("#add").show('slow');
+	});
+	
 	$("#prayer-form").submit(function(){
 		if (isEmptyInput(nameInputId, defaultNameText) || isEmptyInput(prayerInputId, defaultPrayerText)){
 			if (isEmptyInput(nameInputId, defaultNameText)) {
